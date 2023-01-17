@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 def print_last_digit(number):
     try:
-        print(str(int(str(number)))[-1], end='')
+        r = str(int(str(number)))[-1]
+        print(r, end='')
+        return r
     except:
-        pass
+        return ''
