@@ -13,7 +13,7 @@ def safe_print_list(my_list=[], x=0):
                 continue
 
             print("{:d}".format(my_list[i]), end='')
-            k += 1
+            r += 1
 
         except IndexError:
             pass
