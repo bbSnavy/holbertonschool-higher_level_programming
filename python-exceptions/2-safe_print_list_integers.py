@@ -8,8 +8,8 @@ def safe_print_list_integers(my_list=[], x=0):
     for i in range(x):
         try:
             v = my_list[i]
-        except IndexError:
-            continue
+        except IndexError as exception:
+            raise exception
 
         if v is None:
             continue
