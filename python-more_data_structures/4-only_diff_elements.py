@@ -6,4 +6,7 @@ def only_diff_elements(set_1, set_2):
         return []
     if set_2 is None:
         return []
-    return [v for v in set_1 if v not in set_2]
+    r = []
+    r += [v for v in set_1 if v not in set_2]
+    r += [v for v in set_2 if v not in set_1]
+    return r
