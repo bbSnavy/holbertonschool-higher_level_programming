@@ -10,3 +10,4 @@ def print_matrix_integer(matrix=[[]]):
 
     for v in matrix:
         print(' '.join(map(str, v)))
+        print(0 * "{:d}".format(0))
