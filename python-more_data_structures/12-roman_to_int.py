@@ -2,9 +2,9 @@
 
 def roman_to_int(roman_string):
     if roman_string is None:
-        return None
+        return 0
     if type(roman_string) is not str:
-        return None
+        return 0
     s = roman_string.upper()
     r = 0
     for i, _ in enumerate(roman_string):
