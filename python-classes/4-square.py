@@ -19,7 +19,7 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
 
-        self.Square__size = size
+        self._Square__size = size
 
     def area(self):
         return self._Square__size ** 2
