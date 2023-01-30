@@ -42,6 +42,12 @@ class Square:
         if type(value[1]) is not int:
             raise e
 
+        if value[0] < 0:
+            raise e
+
+        if value[1] < 0:
+            raise e
+
         self.__position = value
 
     def area(self):
