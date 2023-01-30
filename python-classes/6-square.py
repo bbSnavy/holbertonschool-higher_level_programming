@@ -57,6 +57,9 @@ class Square:
         r = ''
         s = self.__size
         p = self.__position
+        if s == 0:
+            print()
+            return
         for i in range(p[1]):
             r += '\n'
         for x in range(s):
