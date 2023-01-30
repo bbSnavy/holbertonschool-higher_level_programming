@@ -57,10 +57,14 @@ class Square:
         r = ''
         s = self.__size
         p = self.__position
+        for i in range(p[1]):
+            r += '\n'
         for x in range(s):
             r += ' ' * p[0]
             for y in range(s):
                 r += '#'
             if (x + 1) < s:
                 r += '\n'
+        for i in range(p[1]):
+            r += '\n'
         print(r)
