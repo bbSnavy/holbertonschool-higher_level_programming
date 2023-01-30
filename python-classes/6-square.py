@@ -65,6 +65,4 @@ class Square:
                 r += '#'
             if (x + 1) < s:
                 r += '\n'
-        for i in range(p[1]):
-            r += '\n'
         print(r)
