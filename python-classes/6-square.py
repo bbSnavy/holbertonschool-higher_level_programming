@@ -63,7 +63,7 @@ class Square:
             r += ' ' * p[0]
             for y in range(s):
                 r += '#'
-            if (x + 1) < s:
+            if (x + 2) < s:
                 r += '\n'
         for i in range(p[1]):
             r += '\n'
