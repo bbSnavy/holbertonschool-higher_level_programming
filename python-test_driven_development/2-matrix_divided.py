@@ -3,6 +3,7 @@
 
 
 def matrix_divided(matrix, div):
+    """ div matrix dinu """
     r = []
 
     if div is None:
