@@ -10,6 +10,10 @@ def matrix_divided(matrix, div):
         raise TypeError(
             "div must be a number")
 
+    if type(div) not in [int, float]:
+        raise TypeError(
+            "div must be a number")
+
     try:
         div = int(div)
     except:
