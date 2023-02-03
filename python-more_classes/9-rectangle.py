@@ -85,4 +85,4 @@ class Rectangle():
 
     @staticmethod
     def square(cls, size=0):
-        return Cls(size, size)
+        return cls(size, size)
