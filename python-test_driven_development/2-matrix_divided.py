@@ -5,6 +5,22 @@
 def matrix_divided(matrix, div):
     r = []
 
+    if div is None:
+        raise TypeError(
+            "div must be a number")
+
+    try:
+        div = int(div)
+    except:
+        raise TypeError("div must be a number")
+
+    if div == 0.0:
+        raise ZeroDivisionError("division by zero")
+
+    if matrix is None:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+
     if type(matrix) is not list:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
@@ -17,16 +33,14 @@ def matrix_divided(matrix, div):
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
 
-    l = len(matrix)
+    if len(matrix) == 0 or len(matrix[0]) == 0:
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+
+    l = len(matrix[0])
     for v in matrix:
-        if len(v) is not l:
+        if len(v) != l:
             raise TypeError("Each row of the matrix must have the same size")
-
-    if type(div) not in [int, float]:
-        raise TypeError("div must be a number")
-
-    if div == 0.0:
-        raise ZeroDivisionError("division by zero")
 
     for l in matrix:
         n = []
