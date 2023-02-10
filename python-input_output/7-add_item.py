@@ -13,5 +13,4 @@ if __name__ == '__main__':
         v = load_from_json_file('add_item.json')
     except:
         v = []
-    v.extend(sys.argv[1:][:])
-    save_to_json_file(v, 'add_item.json')
+    save_to_json_file(v + sys.argv[1:][:], 'add_item.json')
