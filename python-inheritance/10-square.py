@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" square """
+""" Base Geometry """
 
 
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ square """
+    """ Base Geometry """
 
     def __init__(self, size):
         self.integer_validator('size', size):
