@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-""" save json file """
+""" load json file """
 import json
 
 
-def save_to_json_file(my_obj, filename):
-    """ save json file """
+def load_from_json_file(filename):
+    """ load json file """
     with open(filename, 'w') as file:
-        json.dump(my_obj, filename)
+        r = json.load(file)
+    return r
