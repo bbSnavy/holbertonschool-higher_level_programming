@@ -74,3 +74,7 @@ class Rectangle(Base):
     def area(self):
         """ area """
         return self.width * self.height
+
+    def display(self):
+        """ display """
+        print('\n'.join(['#' * self.x for y in self.y]))
