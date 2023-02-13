@@ -15,21 +15,18 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def input_check(self, value, name):
-        """ input check """
-        if type(value) not in [int]:
-            raise TypeError(f"{name} must be an integer")
-
-        if value < 0:
-            raise ValueError(f"{name} must be >= 0")
-
     @property
     def width(self):
         return self.__width
 
     @width.setter
     def width(self, value):
-        self.input_check(value, 'width')
+        if type(value) not in [int]:
+            raise TypeError('width must be an integer')
+
+        if value <= 0:
+            raise ValueError('width must be > 0')
+
         self.__width = value
 
     @property
@@ -38,7 +35,12 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.input_check(value, 'height')
+        if type(value) not in [int]:
+            raise TypeError('height must be an integer')
+
+        if value <= 0:
+            raise ValueError('height must be > 0')
+
         self.__height = value
 
     @property
@@ -47,7 +49,12 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.input_check(value, 'x')
+        if type(value) not in [int]:
+            raise TypeError('x must be an integer')
+
+        if value < 0:
+            raise ValueError('x must be >= 0')
+
         self.__x = value
 
     @property
@@ -56,5 +63,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.input_check(value, 'y')
+        if type(value) not in [int]:
+            raise TypeError('y must be an integer')
+
+        if value < 0:
+            raise ValueError('y must be >= 0')
+
         self.__y = value
