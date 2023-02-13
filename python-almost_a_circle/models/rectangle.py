@@ -16,6 +16,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def input_check(self, value, name):
+        """ input check """
         if type(value) not in [int]:
             raise TypeError(f"{name} must be an integer")
 
