@@ -6,7 +6,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """ rectangle """
+    """ square """
 
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
@@ -17,5 +17,5 @@ class Square(Rectangle):
         r += '(%s) ' % (self.id)
         r += '%s/%s' % (self.x, self.y)
         r += ' - '
-        r += '%s' % (self.size)
+        r += '%s' % (self.width)
         return r
