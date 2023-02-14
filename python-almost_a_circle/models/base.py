@@ -26,7 +26,7 @@ class Base:
         """ save to file """
         l = []
         if list_objs:
-            l.append(list_objs.to_dictionary())
+            [l.append(v.to_dictionary()) for v in list_objs]
 
         with open('%s.json' % (cls.__name__), 'w') as file:
             file.write(cls.to_json_string(l))
