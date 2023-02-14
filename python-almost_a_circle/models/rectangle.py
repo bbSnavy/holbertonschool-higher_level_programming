@@ -91,8 +91,24 @@ class Rectangle(Base):
         s += '%s/%s' % (self.width, self.height)
         return s
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ update """
+
+        if not args:
+            for k, v in kwargs.items():
+                if k == 'id':
+                    self.id = v
+                if k == 'width':
+                    self.width = v
+                if k == 'height':
+                    self.height = v
+                if k == 'x':
+                    self.x = v
+                if k == 'y':
+                    self.y = v
+
+            return
+
         for i, v in enumerate(args):
             if i == 0:
                 self.id = v
