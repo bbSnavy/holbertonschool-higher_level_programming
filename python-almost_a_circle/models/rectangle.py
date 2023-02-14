@@ -77,4 +77,4 @@ class Rectangle(Base):
 
     def display(self):
         """ display """
-        print('\n'.join(['#' * self.x for y in self.y]))
+        print('\n'.join(['#' * self.x for y in range(self.y)]))
