@@ -94,14 +94,13 @@ class Rectangle(Base):
     def update(self, *args):
         """ update """
         for i, v in enumerate(args):
-            match i:
-                case 0:
-                    self.id = v
-                case 1:
-                    self.width = v
-                case 2:
-                    self.height = v
-                case 3:
-                    self.x = v
-                case 4:
-                    self.y = v
+            if v == 0:
+                self.id = v
+            if v == 1:
+                self.width = v
+            if v == 2:
+                self.height = v
+            if v == 3:
+                self.x = v
+            if v == 4:
+                self.y = v
