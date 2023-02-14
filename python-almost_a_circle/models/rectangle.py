@@ -92,6 +92,7 @@ class Rectangle(Base):
         return s
 
     def update(self, *args):
+        """ update """
         for i, v in enumerate(args):
             match i:
                 case 0:
