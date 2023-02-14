@@ -83,6 +83,7 @@ class Rectangle(Base):
         s = ''
         s += '[Rectangle] '
         s += '(%s) ' % (self.id)
-        s += '%s/%s ' % (self.x, self.y)
+        s += '%s/%s' % (self.x, self.y)
+        s += ' - '
         s += '%s/%s' % (self.width, self.height)
         return s
