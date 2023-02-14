@@ -90,3 +90,17 @@ class Rectangle(Base):
         s += ' - '
         s += '%s/%s' % (self.width, self.height)
         return s
+
+    def update(self, *args):
+        for i, v in enumerate(args):
+            match i:
+                case 0:
+                    self.id = v
+                case 1:
+                    self.width = v
+                case 2:
+                    self.height = v
+                case 3:
+                    self.x = v
+                case 4:
+                    self.y = v
