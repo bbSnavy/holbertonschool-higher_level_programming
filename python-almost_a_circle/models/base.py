@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ base """
 import json
+import turtle
 
 
 class Base:
@@ -63,3 +64,27 @@ class Base:
 
         data = cls.from_json_string(data)
         return [cls.create(**v) for v in data]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        w = turtle.Screen()
+
+        w.bgcolor('yellow')
+        w.title('Almost a circle')
+
+        t = turtle.Turtle()
+        t.up()
+        t.clear()
+
+        for obj in list_rectangles + list_squares:
+            p = (obj.x(), obj.y())
+            t.goto(p)
+            t.down()
+            t.forward(obj.width())
+            t.left(90)
+            t.forward(obj.height())
+            t.left(90)
+            t.forward(obj.width())
+            t.left(90)
+            t.forward(obj.width())
+            t.up()
