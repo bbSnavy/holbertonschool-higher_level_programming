@@ -48,5 +48,6 @@ class Base:
         else:
             obj = cls(7)
 
-        obj.update(dictionary)
+        obj.update(**dictionary)
+
         return obj
