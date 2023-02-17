@@ -18,7 +18,7 @@ class Square(Rectangle):
         r += '(%s) ' % (self.id)
         r += '%s/%s' % (self.x, self.y)
         r += ' - '
-        r += '%s' % (self.size)
+        r += '%s' % (self.width)
         return r
 
     @property

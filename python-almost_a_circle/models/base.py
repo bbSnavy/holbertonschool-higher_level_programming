@@ -44,9 +44,9 @@ class Base:
         """ create """
 
         if 'rectangle' in cls.__name__.lower():
-            obj = cls(7, 7)
+            obj = cls(1, 1)
         else:
-            obj = cls(7)
+            obj = cls(1)
 
         obj.update(**dictionary)
 
