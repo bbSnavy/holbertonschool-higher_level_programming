@@ -55,8 +55,11 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ load from file """
-        with open('%s.json' % (cls.__name__), 'r') as file:
-            data = file.read()
+        try:
+            with open('%s.json' % (cls.__name__), 'r') as file:
+                data = file.read()
+        except:
+            data = None
 
         data = cls.from_json_string(data)
-        return [cls.create(v) for v in data]
+        return [cls.create(**v) for v in data]
