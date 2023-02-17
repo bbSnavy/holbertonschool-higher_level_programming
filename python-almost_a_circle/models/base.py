@@ -38,3 +38,15 @@ class Base:
         if not json_string:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ create """
+
+        if 'rectangle' in cls.__name__.lower():
+            obj = cls(7, 7)
+        else:
+            obj = cls(7)
+
+        obj.update(dictionary)
+        return obj
