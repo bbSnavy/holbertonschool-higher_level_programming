@@ -4,6 +4,6 @@ const v = [
   'Python is cool',
   'JavaScript is amazing'
 ];
-for (const s in v) {
+for (const s of v) {
   console.log(s);
 }
