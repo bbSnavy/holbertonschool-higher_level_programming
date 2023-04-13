@@ -1,0 +1,9 @@
+#!/usr/bin/node
+const arg = process.args[2];
+if (!arg) {
+  console.log('Missing number of occurrences');
+} else {
+  for (let i = 0; i < parseInt(arg); i++) {
+    console.log('C is fun');
+  }
+}
