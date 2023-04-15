@@ -7,12 +7,15 @@ class Square extends SquareOld {
   }
 
   charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
+    let v;
+
+    v = c;
+    if (v === undefined) {
+      v = 'X';
     }
 
     for (let i = 0; i < this.size; i++) {
-      console.log(c.repeat(this.size));
+      console.log(v.repeat(this.size));
     }
   }
 }
