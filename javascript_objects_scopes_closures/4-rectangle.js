@@ -18,6 +18,14 @@ class Rectangle {
       console.log('X'.repeat(this.width));
     }
   }
+
+  rotate () {
+    [this.width, this.height] = [this.height, this.width];
+  }
+
+  double () {
+    [this.width, this.height] = [this.width, this.height].map(v => v * 2);
+  }
 }
 
 module.exports = Rectangle;
